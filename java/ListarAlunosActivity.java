@@ -22,4 +22,13 @@ public class ListarAlunosActivity extends AppCompatActivity {
       ArrayAdapter<Aluno> adaptador = new ArrayAdapter<Aluno>(this,android.R.layout.simple_list_item_1,alunos);
       listView.setAdapter(adaptador);
   }
+  
+  public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater i = getMenuInflater();
+        i.inflate(R.menu.menu_principal, menu);
+        return true;
+  }
+  public void cadastrar(MenuItem item){
+    
+  }
 }
