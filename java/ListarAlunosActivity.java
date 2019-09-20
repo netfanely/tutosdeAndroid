@@ -29,6 +29,16 @@ public class ListarAlunosActivity extends AppCompatActivity {
         return true;
   }
   public void cadastrar(MenuItem item){
+        Intent it new Intent(this, CadastroAlunoActivity);
+        startActivity(it);
+  }
+  @Override
+  public void onResume(){
+        super.onResume();
+        alunos = dao.obterTodos();
+        alunosFiltrados.clear();
+        alunosFiltrados.addAll(alunos);
+        listView.invalidateViews();
     
   }
 }
