@@ -17,5 +17,9 @@ public class ListarAlunosActivity extends AppCompatActivity {
     
       listView = findViewById(R.id.lista_alunos);
       dao = new AlunoDAO(this);
+      alunos = dao.obterTodos();
+      alunosFiltrados.addAll(alunos);
+      ArrayAdapter<Aluno> adaptador = new ArrayAdapter<Aluno>(this,android.R.layout.simple_list_item_1,alunos);
+      listView.setAdapter(adaptador);
   }
 }
