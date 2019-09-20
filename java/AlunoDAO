@@ -1,6 +1,8 @@
 /* Dao Aluno*/
 
-  private SQLiteDatabase banco;
+public class AlunoDAO{
+   private Conexao conexao;
+   private SQLiteDatabase banco;
   
     public AlunoDAO(Context context){ 
      conexao = new Conexao(Context);
