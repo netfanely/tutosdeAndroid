@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         tv = (TextView) findViewById(R.id.texto);
         sm = (SensorManager)getSystemService(SENSOR_SERVICE);
         sensor = sm.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+      //sm.registerListener(this,sensor,SensorManager.SENSOR_DELAY_NORMAL);
+      //sm.registerListener(this,sensor,SensorManager.SENSOR_DELAY_UI);
    }
    
    @Override
